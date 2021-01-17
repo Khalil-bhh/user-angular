@@ -1,0 +1,15 @@
+<mat-card class="user-card" >
+  <mat-card-content>
+    <div id="delete-button">
+      <mat-icon (click)="deleteUser();emitClean()">delete</mat-icon>
+    </div>
+    <form class="form-group" >
+      <label for="name" class="form-label">Nom</label>
+      <input id="name" class="form-control" value="{{user?.name}}" (click)="emitUser()" name="name" disabled>
+      <label for="lastname" class="form-label">Prenom</label>
+      <input id="lastname" class="form-control" value="{{user?.lastname}}"   (click)="emitUser()" name="lastname" disabled>
+      <label for="age" class="form-label">age</label>
+      <input id="age" class="form-control" type="number" [(ngModel)]="user.age" name="age" (change)="updateAge()">
+    </form>
+  </mat-card-content>
+</mat-card>
