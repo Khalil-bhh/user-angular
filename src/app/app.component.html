@@ -40,5 +40,6 @@
     <label for="newAge" class="form-label" >age</label>
     <input id="newAge" class="form-control" type="number" name="newage" [(ngModel)]="newUser.age" >
     <input type="button" class="btn btn-success" value="Ajouter" (click)="addUser()">
+    <input type="button" class="btn btn-danger" value="Annuler" (click)="overlayShow=false">
   </form>
 </div>
